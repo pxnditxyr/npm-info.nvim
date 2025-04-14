@@ -35,15 +35,24 @@ Using [Lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
 require("npm-info").setup({
   icons = {
-    installed = "⚡",   -- Installed version icon
-    outdated = "🚀👆",   -- Outdated version icon
-    unstable = "⚠️🔄"    -- Unstable version icon
+    beta = "󰂡",
+    current = "",
+    isLatest = "",
+    outdated = "",
   },
   hl_groups = {
-    installed = "Comment",     -- Highlight for installed
-    outdated = "WarningMsg",  -- Highlight for outdated
-    unstable = "Error"        -- Highlight for unstable
-  }
+    beta = "DiagnosticWarn",
+    current  = "Comment",
+    isLatest = "NpmLatest",
+    outdated = "NpmOutdated",
+  },
+  messages = {
+    beta = "beta",
+    current = "Current",
+    isLatest = "is Latest",
+    outdated = "Latest %s",
+  },
+  show_installed = true,
 })
 ````
 
